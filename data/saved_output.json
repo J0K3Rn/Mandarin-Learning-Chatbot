@@ -1,0 +1,22 @@
+[
+    {
+        "character": "我",
+        "examples": [
+            "我喜欢看电影和读书。",
+            "我每天早晨都起床跑步。",
+            "我正在学习中文，希望能流利地和别人沟通。"
+        ]
+    },
+    {
+        "character": "test",
+        "examples": [
+            "abcdefg"
+        ]
+    },
+    {
+        "character": "abc",
+        "examples": [
+            "Hello World!"
+        ]
+    }
+]
