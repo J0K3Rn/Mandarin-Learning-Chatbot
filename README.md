@@ -4,9 +4,8 @@ pip install openai
 
 pip install python-dotenv
 
-json structure:
-[
-    {
-        "charatcer": "<chinese char>"
-
-]
+todo:
+- Implement Pinyin
+- Add english translation using google
+- Add pronunciations using google speech
+- add this all into an app or website? Have not decided yet
