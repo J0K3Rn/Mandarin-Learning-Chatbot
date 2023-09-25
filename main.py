@@ -1,6 +1,8 @@
 import openai
 import dotenv
 import json
+import pandas as pd
+from random import choice
 
 
 prompt = "Generate 3 sentences in Chinese using the character 我."
@@ -31,7 +33,7 @@ def add_character(character):
     dictionary.append(new_dict)
     with open(SAVED_OUTPUT, "w") as file:
         #json.dumps(MarksList, indent=4)
-        print(json.dumps(dictionary, indent=4, ensure_ascii=False))
+        #print(json.dumps(dictionary, indent=4, ensure_ascii=False))
         file.write(json.dumps(dictionary, indent=4, ensure_ascii=False))
 
 
@@ -44,15 +46,25 @@ def check_if_character_exists(character):
     add_character(character)
 
 
+def get_character_examples(character):
+    global dictionary
+    example_list = []
+    for index in dictionary:
+        #print(index)
+        if index['character'] == character:
+            example_list = index['examples']
+    return example_list
+
+
 def add_character_example(character, example):
     global dictionary
     # Update
     for index, dic in enumerate(dictionary):
         if dic['character'] == character:
             dictionary[index]['examples'].append(example)
-            print(dictionary)
+            #print(dictionary)
             with open(SAVED_OUTPUT, "w") as file:
-                print(json.dumps(dictionary, indent=4, ensure_ascii=False))
+                #print(json.dumps(dictionary, indent=4, ensure_ascii=False))
                 file.write(json.dumps(dictionary, indent=4, ensure_ascii=False))
             reload_dictionary()
             return
@@ -69,9 +81,33 @@ def check_if_example_exists(character, example):
     add_character_example(character, example)
 
 
-reload_dictionary()
+# Read csv and convert to dictionary
+try:
+    df = pd.read_csv('data/chinese_words.csv')
+except FileNotFoundError:
+    print("File not found!")
+    exit(1)
+
+to_learn = df.to_dict(orient="records")
+total = 69740745  # Accumulation of all Frequency Count in the CSV
+current_entry = choice(to_learn)
+character = current_entry['Chinese']
+meaning = current_entry['English']
+frequency = current_entry['Frequency Count']/total
+frequency = f'{frequency:.9f}%'
+
+print(current_entry)
+print(character)
+print(meaning)
+print(frequency)
+
+
+reload_dictionary()  # Need this function ran every time the program starts
 #check_if_character_exists("abc")
-check_if_example_exists("abc", "Hello World!")
+# if so, get examples
+examples = get_character_examples("abc")
+print(examples)
+#check_if_example_exists("abc", "Hello World!")
 
 #
 # response = openai.ChatCompletion.create(

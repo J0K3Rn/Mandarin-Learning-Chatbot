@@ -18,7 +18,7 @@ Todo:
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
-- run `pip install openai python-dotenv`
+- run `pip install openai python-dotenv pandas`
 - Create an OpenAI account
 - Create a secret key and copy it from https://platform.openai.com/account/api-keys
 - Create a .env file in the root of this project folder
