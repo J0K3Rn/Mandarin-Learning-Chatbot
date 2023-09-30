@@ -18,11 +18,16 @@ Todo:
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
-- run `pip install openai python-dotenv pandas`
+- run `pip install openai python-dotenv pandas flask`
 - Create an OpenAI account
 - Create a secret key and copy it from https://platform.openai.com/account/api-keys
 - Create a .env file in the root of this project folder
 - Open up the .env file with a text editor
 - Add `OPENAI_API_KEY=<Add your secret key here>` to the .env
 - That's it!
-- run the program with `python main.py`
+- Run the program with `python main.py`
+- Open a web browser and go to `127.0.0.1:5000` 
+
+Main Page:
+
+![alt text](https://github.com/J0K3Rn/Mandarin-Learning-Chatbot/blob/main/screenshots/main_page.png?raw=true) 

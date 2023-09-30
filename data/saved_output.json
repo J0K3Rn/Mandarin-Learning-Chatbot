@@ -8,15 +8,23 @@
         ]
     },
     {
-        "character": "test",
+        "character": "杀死",
         "examples": [
-            "abcdefg"
+            "他杀死了那个入侵者，保护了自己的家人。"
         ]
     },
     {
-        "character": "abc",
+        "character": "女朋友",
         "examples": [
-            "Hello World!"
+            "我的女朋友非常漂亮，她是我心中最重要的人。"
+        ]
+    },
+    {
+        "character": "材料",
+        "examples": [
+            "这个材料非常坚固，可以用来制作耐用的家具。",
+            "这份材料列表包括所需的所有原材料和配件。",
+            "请将所有的材料都准备齐全，以便开始施工工作。"
         ]
     }
 ]
