@@ -14,6 +14,7 @@ Todo:
 - Add english translation using google
 - Add pronunciations using google speech
 - add this all into a website
+- implement a carousel to display all items/cards
 
 How to run:
 - Download repository
