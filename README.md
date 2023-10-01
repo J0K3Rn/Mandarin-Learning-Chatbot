@@ -10,10 +10,8 @@ Built upon many aspects from my Chinese-Flash-Cards repository: https://github.c
 
 Todo:
 - Implement Pinyin
-- Implementing using of csv and using that info to query ChatGPT
 - Add english translation using google
 - Add pronunciations using google speech
-- add this all into a website
 - implement a carousel to display all items/cards
 
 How to run:
