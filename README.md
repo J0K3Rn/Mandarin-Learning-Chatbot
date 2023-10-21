@@ -12,8 +12,7 @@ Todo:
 - Implement Pinyin
 - Add english translation using google
 - Add pronunciations using google speech
-- implement a carousel to display all items/cards
-
+- implement a refresh button to pick a new word
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
