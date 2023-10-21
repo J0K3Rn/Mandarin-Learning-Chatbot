@@ -138,6 +138,7 @@ def main():
     examples = chatgpt_query(character)
     # Present examples to user
     return render_template('index.html', character=character, examples=examples, frequency=frequency)
+    #return render_template('index.html')
 
 
 if __name__ == "__main__":
