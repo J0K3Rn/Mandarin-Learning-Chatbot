@@ -26,8 +26,6 @@
             {% for example in examples %}
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{loop.index}}" aria-label="Slide {{loop.index}}"></button>
             {% endfor %}
-
-<!--          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -35,8 +33,8 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>{{character}}</h1>
-                <p class="opacity-75">--English Translation--</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Pinyin</a></p>
+                <p><a class="btn btn-lg btn-info" href="#">Pinyin</a></p>
+                <p class="opacity-75">{{meaning}}</p>
               </div>
             </div>
           </div>
@@ -46,8 +44,8 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>{{example}}</h1>
-                <p>--English Translation--</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Pinyin</a></p>
+                <p><a class="btn btn-lg btn-info" href="#">Pinyin</a></p>
+                <p class="opacity-75">--English Translation--</p>
               </div>
             </div>
           </div>

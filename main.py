@@ -137,7 +137,7 @@ def main():
     # Ask ChatGPT to generate some examples
     examples = chatgpt_query(character)
     # Present examples to user
-    return render_template('index.html', character=character, examples=examples, frequency=frequency)
+    return render_template('index.html', character=character, meaning=meaning, examples=examples, frequency=frequency)
     #return render_template('index.html')
 
 
