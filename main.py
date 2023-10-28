@@ -5,6 +5,7 @@ import pandas as pd
 from random import choice
 from flask import Flask, render_template, request
 import pinyin
+from googletrans import Translator
 
 
 # Start Setup
@@ -13,6 +14,7 @@ config = dotenv.dotenv_values(".env")
 openai.api_key = config['OPENAI_API_KEY']
 SAVED_OUTPUT = "data/saved_output.json"
 dictionary = []  # list of dictionaries
+translator = Translator()
 
 # Read csv and convert to dictionary
 try:
@@ -139,9 +141,15 @@ def main():
     # Ask ChatGPT to generate some examples
     examples = chatgpt_query(character)
     examples_pinyin = [pinyin.get(example, delimiter=" ") for example in examples]
+    examples_english = [translator.translate(example, src='zh-CN', dest='en').text for example in examples]
+
+    # Additional Debug
+    print(examples)
     print(examples_pinyin)
+    print(examples_english)
+
     # Present examples to user
-    return render_template('index.html', character=character, character_pinyin=character_pinyin, meaning=meaning, examples=examples, examples_pinyin=examples_pinyin, frequency=frequency)
+    return render_template('index.html', character=character, character_pinyin=character_pinyin, meaning=meaning, examples=examples, examples_pinyin=examples_pinyin, examples_english=examples_english, frequency=frequency)
     #return render_template('index.html')
 
 

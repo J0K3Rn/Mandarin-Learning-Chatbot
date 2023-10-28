@@ -10,13 +10,14 @@ Built upon many aspects from my Chinese-Flash-Cards repository: https://github.c
 
 Todo:
 - Make pinyin toggleable
-- Add english translation using google
+- Make english toggleable
 - Add pronunciations using google speech
 - implement a refresh button to pick a new word
+- implement a highlight-translate for each character: https://stackoverflow.com/questions/4712310/javascript-how-to-detect-if-a-word-is-highlighted
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
-- run `pip install openai python-dotenv pandas flask pinyin`
+- run `pip install openai python-dotenv pandas flask pinyin googletrans==4.0.0-rc1`
 - Create an OpenAI account
 - Create a secret key and copy it from https://platform.openai.com/account/api-keys
 - Create a .env file in the root of this project folder
