@@ -34,23 +34,27 @@
               <div class="carousel-caption">
                 <h1>{{character}}</h1>
 <!--                <p><a class="btn btn-lg btn-info" href="#">Pinyin</a></p>-->
-                  <p>{{character_pinyin}}</p>
-                <p class="opacity-75">{{meaning}}</p>
+                  <button onclick="this.disabled=true;document.getElementById('ch').hidden = '';">Show Pinyin</button>
+                  <p id="ch" hidden="hidden">{{character_pinyin}}</p>
+                  <button onclick="this.disabled=true;document.getElementById('en').hidden = '';">Show English Translation</button>
+                <p id=en class="opacity-75" hidden="hidden">{{meaning}}</p>
               </div>
             </div>
           </div>
             {% for example in examples %}
             <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>{{example}}</h1>
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>{{example}}</h1>
 <!--                <p><a class="btn btn-lg btn-info" href="#">Pinyin</a></p>-->
-                  <p>{{examples_pinyin[loop.index-1]}}</p>
-                <p class="opacity-75">{{examples_english[loop.index-1]}}</p>
-              </div>
+                    <button onclick="this.disabled=true;document.getElementById('ch{{loop.index-1}}').hidden = '';">Show Pinyin</button>
+                    <p id=ch{{loop.index-1}} hidden="hidden">{{examples_pinyin[loop.index-1]}}</p>
+                    <button onclick="this.disabled=true;document.getElementById('en{{loop.index-1}}').hidden = '';">Show English Translation</button>
+                    <p id=en{{loop.index-1}} class="opacity-75" hidden="hidden">{{examples_english[loop.index-1]}}</p>
+                  </div>
+                </div>
             </div>
-          </div>
             {% endfor %}
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -60,6 +64,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>

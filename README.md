@@ -9,8 +9,7 @@ Previous iteration of this project was Bardarin, however Bards API is third part
 Built upon many aspects from my Chinese-Flash-Cards repository: https://github.com/J0K3Rn/Chinese-Flash-Cards
 
 Todo:
-- Make pinyin toggleable
-- Make english toggleable
+- Make toggleable buttons better looking and formatted
 - Add narrator using google speech
 - implement microphone listening feature to check pronunciation
 - implement a refresh button to pick a new word
