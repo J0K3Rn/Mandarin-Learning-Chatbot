@@ -11,7 +11,8 @@ Built upon many aspects from my Chinese-Flash-Cards repository: https://github.c
 Todo:
 - Make pinyin toggleable
 - Make english toggleable
-- Add pronunciations using google speech
+- Add narrator using google speech
+- implement microphone listening feature to check pronunciation
 - implement a refresh button to pick a new word
 - implement a highlight-translate for each character: https://stackoverflow.com/questions/4712310/javascript-how-to-detect-if-a-word-is-highlighted
 How to run:
