@@ -14,6 +14,7 @@ Todo:
 - implement microphone listening feature to check pronunciation
 - implement a refresh button to pick a new word
 - implement a highlight-translate for each character: https://stackoverflow.com/questions/4712310/javascript-how-to-detect-if-a-word-is-highlighted
+
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
