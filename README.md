@@ -9,14 +9,14 @@ Previous iteration of this project was Bardarin, however Bards API is third part
 Built upon many aspects from my Chinese-Flash-Cards repository: https://github.com/J0K3Rn/Chinese-Flash-Cards
 
 Todo:
-- Implement Pinyin
+- Make pinyin toggleable
 - Add english translation using google
 - Add pronunciations using google speech
 - implement a refresh button to pick a new word
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
-- run `pip install openai python-dotenv pandas flask`
+- run `pip install openai python-dotenv pandas flask pinyin`
 - Create an OpenAI account
 - Create a secret key and copy it from https://platform.openai.com/account/api-keys
 - Create a .env file in the root of this project folder

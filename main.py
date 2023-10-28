@@ -4,6 +4,7 @@ import json
 import pandas as pd
 from random import choice
 from flask import Flask, render_template, request
+import pinyin
 
 
 # Start Setup
@@ -125,6 +126,7 @@ def main():
     current_entry = choice(to_learn)
     character = current_entry['Chinese']
     meaning = current_entry['English']
+    character_pinyin = pinyin.get(character, delimiter=" ")
     frequency = current_entry['Frequency Count'] / total
     frequency = f'{frequency:.9f}%'
 
@@ -136,8 +138,10 @@ def main():
 
     # Ask ChatGPT to generate some examples
     examples = chatgpt_query(character)
+    examples_pinyin = [pinyin.get(example, delimiter=" ") for example in examples]
+    print(examples_pinyin)
     # Present examples to user
-    return render_template('index.html', character=character, meaning=meaning, examples=examples, frequency=frequency)
+    return render_template('index.html', character=character, character_pinyin=character_pinyin, meaning=meaning, examples=examples, examples_pinyin=examples_pinyin, frequency=frequency)
     #return render_template('index.html')
 
 
